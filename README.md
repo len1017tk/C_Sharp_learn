@@ -6,5 +6,5 @@
 を教材としています。
 
 ## .gitignore
-*FileListAbsolute.txt
+*FileListAbsolute.txt  
 　→VisualStudioがビルドする時に再作成するファイルをメモしている中間ファイル。ローカルの実行環境が記録されるので除外。

@@ -1,0 +1,10 @@
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\bin\Debug\ControlCheck.exe.config
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\bin\Debug\ControlCheck.exe
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\bin\Debug\ControlCheck.pdb
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csprojAssemblyReference.cache
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.Form1.resources
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.Properties.Resources.resources
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csproj.GenerateResource.cache
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csproj.CoreCompileInputs.cache
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.exe
+C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.pdb

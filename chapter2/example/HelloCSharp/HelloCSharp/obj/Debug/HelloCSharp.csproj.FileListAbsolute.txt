@@ -1,0 +1,10 @@
+C:\playground\HelloCSharp\HelloCSharp\bin\Debug\HelloCSharp.exe.config
+C:\playground\HelloCSharp\HelloCSharp\bin\Debug\HelloCSharp.exe
+C:\playground\HelloCSharp\HelloCSharp\bin\Debug\HelloCSharp.pdb
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.csprojAssemblyReference.cache
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.Form1.resources
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.Properties.Resources.resources
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.csproj.GenerateResource.cache
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.csproj.CoreCompileInputs.cache
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.exe
+C:\playground\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.pdb

@@ -17,3 +17,13 @@ C:\workspace\C_Sharp_learn\2章\例題\HelloCSharp\HelloCSharp\obj\Release\Hello
 C:\workspace\C_Sharp_learn\2章\例題\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.csproj.CoreCompileInputs.cache
 C:\workspace\C_Sharp_learn\2章\例題\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.exe
 C:\workspace\C_Sharp_learn\2章\例題\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.pdb
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\bin\Release\HelloCSharp.exe.config
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\bin\Release\HelloCSharp.exe
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\bin\Release\HelloCSharp.pdb
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.csprojAssemblyReference.cache
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.Form1.resources
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.Properties.Resources.resources
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.csproj.GenerateResource.cache
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.csproj.CoreCompileInputs.cache
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.exe
+C:\workspace\C_Sharp_learn\chapter2\example\HelloCSharp\HelloCSharp\obj\Release\HelloCSharp.pdb

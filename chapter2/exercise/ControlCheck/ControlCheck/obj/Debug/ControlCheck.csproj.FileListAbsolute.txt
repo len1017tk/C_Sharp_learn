@@ -8,3 +8,13 @@ C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\
 C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csproj.CoreCompileInputs.cache
 C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.exe
 C:\playground\ゴールからはじめるC#\ControlCheck\ControlCheck\obj\Debug\ControlCheck.pdb
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\bin\Debug\ControlCheck.exe.config
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\bin\Debug\ControlCheck.exe
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\bin\Debug\ControlCheck.pdb
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csprojAssemblyReference.cache
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.Form1.resources
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.Properties.Resources.resources
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csproj.GenerateResource.cache
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.csproj.CoreCompileInputs.cache
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.exe
+C:\workspace\C_Sharp_learn\chapter2\exercise\ControlCheck\ControlCheck\obj\Debug\ControlCheck.pdb

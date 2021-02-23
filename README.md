@@ -6,5 +6,7 @@
 を教材としています。
 
 ## .gitignore
-*FileListAbsolute.txt  
-　→VisualStudioがビルドする時に再作成するファイルをメモしている中間ファイル。ローカルの実行環境が記録されるので除外。
+* *FileListAbsolute.txt  
+VisualStudioがビルドする時に再作成するファイルをメモしている中間ファイル。ローカルの実行環境が記録されるので除外。  
+* *.suo  
+ソリューションユーザオプション。Visual Studioの管理ファイル。ユーザ情報が格納されるので除外。

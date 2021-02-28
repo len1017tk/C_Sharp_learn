@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // TODO：日付妥当性チェック正規化
+// TODO：MonthDayConsistencyCheckの判定に誤りあり
 
 namespace WeekOfDay
 {
@@ -21,6 +22,72 @@ namespace WeekOfDay
 
         private void buttonYoubiSanshutsu_Click(object sender, EventArgs e)
         {
+            // ★テスト★
+            Console.WriteLine("１月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 01, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 01, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 01, 32));
+
+            Console.WriteLine("２月（平年）");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 02, 27));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 02, 28));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 02, 29));
+
+            Console.WriteLine("２月（閏年）");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2020, 02, 27));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2020, 02, 28));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2020, 02, 29));
+
+            Console.WriteLine("３月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 03, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 03, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 03, 32));
+
+            Console.WriteLine("４月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 04, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 04, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 04, 32));
+
+            Console.WriteLine("５月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 05, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 05, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 05, 32));
+
+            Console.WriteLine("６月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 06, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 06, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 06, 32));
+
+            Console.WriteLine("７月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 07, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 07, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 07, 32));
+
+            Console.WriteLine("８月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 08, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 08, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 08, 32));
+
+            Console.WriteLine("９月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 09, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 09, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 09, 32));
+
+            Console.WriteLine("１０月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 10, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 10, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 10, 32));
+
+            Console.WriteLine("１１月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 11, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 11, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 11, 32));
+
+            Console.WriteLine("１２月");
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 12, 30));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 12, 31));
+            Console.WriteLine(this.MonthDayConsistencyCheck(2021, 12, 32));
+
             // 西暦年の取得とエラーチェック
             if (int.TryParse(textBoxSeirekiNen.Text, out int seirekiNen) == false ||
                 seirekiNen < 0)
@@ -36,40 +103,42 @@ namespace WeekOfDay
             // 西暦年の取得とエラーチェック
             if (!this.MonthDayConsistencyCheck(seirekiNen, month, day))
             {
-                label1.Text = "あり得ない日付";
+                labelHantei.Text = "あり得ない日付";
                 return;
             }
 
-            decimal week = this.Zeller(seirekiNen, month, day);
+            decimal week = this.GetDayOfWeek(seirekiNen, month, day);
+
+            Console.WriteLine(week);
 
             // 0 ～ 6 日曜 ～ 
             if (week == 0)
             {
-                label1.Text = "日曜日です。";
+                labelHantei.Text = "日曜日です。";
             }
             else if (week == 1)
             {
-                label1.Text = "月曜日です。";
+                labelHantei.Text = "月曜日です。";
             }
             else if (week == 2)
             {
-                label1.Text = "火曜日です。";
+                labelHantei.Text = "火曜日です。";
             }
             else if (week == 3)
             {
-                label1.Text = "水曜日です。";
+                labelHantei.Text = "水曜日です。";
             }
             else if (week == 4)
             {
-                label1.Text = "木曜日です。";
+                labelHantei.Text = "木曜日です。";
             }
             else if (week == 5)
             {
-                label1.Text = "金曜日です。";
+                labelHantei.Text = "金曜日です。";
             }
             else if (week == 6)
             {
-                label1.Text = "土曜日です。";
+                labelHantei.Text = "土曜日です。";
             }
 
             return;
@@ -79,39 +148,28 @@ namespace WeekOfDay
         // return true：妥当 false：妥当でない
         private bool MonthDayConsistencyCheck(int year, int month, int day)
         {
+            // 末日が31日な月の判定
             if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
             {
-                if (day <= 31)
-                {
-                    return true;
-                } 
-                else
-                {
-                    return false;
-                }
+                return day <= 31;
             }
 
+            // 末日が30日な月の判定
             if (month == 4 || month == 6 || month == 9 || month == 11)
             {
-                if (day <= 30)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return day <= 30;
             }
 
+            // ２月の判定
             if (month == 2)
             {
                 if (this.IsLeapYear(year))
                 {
-                    return true;
+                    return day <= 29;
                 }
                 else
                 {
-                    return false;
+                    return day <= 28;
                 }
             }
             return false;
@@ -126,9 +184,19 @@ namespace WeekOfDay
             return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
         }
 
-        private decimal Zeller(int seirekiNen, int month, int day)
+        // 西暦年、月、日から曜日を求めるメソッド
+        // return 0：日曜 1：月曜 2：火曜 3：水曜 4：木曜 5：金曜 6：土曜
+        private decimal GetDayOfWeek(int year, int month, int day)
         {
-            return 5 * seirekiNen / 4 - seirekiNen / 100 + seirekiNen / 400 + (26m + 16) / 10 + day % 7;
+            // ツェラーの公式を使用して曜日を算出
+            // 1月と2月は、それぞれ13月と14月として公式に当てはめる
+            if (month == 1 || month == 2)
+            {
+                year -= 1;
+                month = 12 + month;
+            }
+
+            return (5 * year / 4 - year / 100 + year / 400 + (26 * month + 16) / 10 + day) % 7;
         }
     }
 }

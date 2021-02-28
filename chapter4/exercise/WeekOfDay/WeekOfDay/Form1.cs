@@ -43,38 +43,32 @@ namespace WeekOfDay
 
             decimal week = this.GetDayOfWeek(seirekiNen, month, day);
 
-            Console.WriteLine(week);
-
-            // 0 ～ 6 日曜 ～ 
-            if (week == 0)
+            switch(week)
             {
-                labelHantei.Text = "日曜日です。";
+                case 0:
+                    labelHantei.Text = "日曜日です。";
+                    break;
+                case 1:
+                    labelHantei.Text = "月曜日です。";
+                    break;
+                case 2:
+                    labelHantei.Text = "火曜日です。";
+                    break;
+                case 3:
+                    labelHantei.Text = "水曜日です。";
+                    break;
+                case 4:
+                    labelHantei.Text = "木曜日です。";
+                    break;
+                case 5:
+                    labelHantei.Text = "金曜日です。";
+                    break;
+                case 6:
+                    labelHantei.Text = "土曜日です。";
+                    break;
+                default:
+                    break;
             }
-            else if (week == 1)
-            {
-                labelHantei.Text = "月曜日です。";
-            }
-            else if (week == 2)
-            {
-                labelHantei.Text = "火曜日です。";
-            }
-            else if (week == 3)
-            {
-                labelHantei.Text = "水曜日です。";
-            }
-            else if (week == 4)
-            {
-                labelHantei.Text = "木曜日です。";
-            }
-            else if (week == 5)
-            {
-                labelHantei.Text = "金曜日です。";
-            }
-            else if (week == 6)
-            {
-                labelHantei.Text = "土曜日です。";
-            }
-
             return;
         }
 
